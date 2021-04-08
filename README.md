@@ -1,2 +1,2 @@
 # HAROLD_VILLANUEVA
-TAREA DE LABORATORIO 1 
+Aquí se encuentran los trabajos del curso algebra abstracta
