@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 3/Modulo/Div.cpp
+Div.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 3/Modulo/Div.h
+iostream
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 3/Modulo/iostream
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 3/Modulo/Div.h
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 3/Modulo/main.cpp
+iostream
+-
+Div.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 3/Modulo/Div.h
+
