@@ -1,3 +1,0 @@
-C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 4/Ejercicios_String/18.7/cmake-build-debug/CMakeFiles/18_7.dir
-C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 4/Ejercicios_String/18.7/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 4/Ejercicios_String/18.7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
