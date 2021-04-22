@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Brute_Force_Caesar/main.cpp
+iostream
+-
+string
+-
+
