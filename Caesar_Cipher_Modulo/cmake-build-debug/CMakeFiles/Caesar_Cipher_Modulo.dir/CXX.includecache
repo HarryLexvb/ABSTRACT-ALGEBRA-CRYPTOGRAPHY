@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Caesar_Cipher_Modulo/Caesar_Algorithm.cpp
+Caesar_Algorithm.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Caesar_Cipher_Modulo/Caesar_Algorithm.h
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Caesar_Cipher_Modulo/Caesar_Algorithm.h
+string
+-
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Caesar_Cipher_Modulo/main.cpp
+iostream
+-
+string
+-
+Caesar_Algorithm.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Caesar_Cipher_Modulo/Caesar_Algorithm.h
+
