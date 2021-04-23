@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Euclides_Algorithm/Euclides_MCD.cpp
+iostream
+-
+Euclides_MCD.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Euclides_Algorithm/Euclides_MCD.h
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Euclides_Algorithm/Euclides_MCD.h
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Euclides_Algorithm/main.cpp
+iostream
+-
+Euclides_MCD.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 6/Euclides_Algorithm/Euclides_MCD.h
+
