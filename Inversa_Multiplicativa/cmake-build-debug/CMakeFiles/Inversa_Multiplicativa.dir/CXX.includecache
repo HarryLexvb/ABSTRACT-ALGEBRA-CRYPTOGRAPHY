@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 7/Inversa_Multiplicativa/Inversa_Multiplicativa.cpp
+Inversa_Multiplicativa.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 7/Inversa_Multiplicativa/Inversa_Multiplicativa.h
+iostream
+-
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 7/Inversa_Multiplicativa/Inversa_Multiplicativa.h
+iostream
+-
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 7/Inversa_Multiplicativa/main.cpp
+iostream
+-
+Inversa_Multiplicativa.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 7/Inversa_Multiplicativa/Inversa_Multiplicativa.h
+
