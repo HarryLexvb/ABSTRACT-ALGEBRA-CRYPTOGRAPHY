@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 7/Random_Function/Random_Function.h
+stdlib.h
+-
+time.h
+-
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 7/Random_Function/main.cpp
+iostream
+-
+Random_Function.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 7/Random_Function/Random_Function.h
+
