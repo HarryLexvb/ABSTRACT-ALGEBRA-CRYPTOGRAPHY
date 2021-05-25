@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 9/RSA_VERSION_0/Crypto_Math.cpp
+Crypto_Math.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 9/RSA_VERSION_0/Crypto_Math.h
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 9/RSA_VERSION_0/Crypto_Math.h
+iostream
+-
+stdlib.h
+-
+time.h
+-
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 9/RSA_VERSION_0/RSA_Cipher.cpp
+RSA_Cipher.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 9/RSA_VERSION_0/RSA_Cipher.h
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 9/RSA_VERSION_0/RSA_Cipher.h
+iostream
+-
+fstream
+-
+string
+-
+Crypto_Math.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 9/RSA_VERSION_0/Crypto_Math.h
+
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 9/RSA_VERSION_0/main.cpp
+iostream
+-
+RSA_Cipher.h
+C:/Users/Usuario/Documents/UCSP/III CICLO/ALGEBRA ABSTRACTA/SEMANA 9/RSA_VERSION_0/RSA_Cipher.h
+
