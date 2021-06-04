@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1622764079 source:c:\users\usuario\documents\ucsp\iii ciclo\algebra abstracta\semana 10\trabajo de investigacion\extendidos y gcd\main.cpp
+	<iostream>
+	<NTL/ZZ.h>
+	<chrono>
+
