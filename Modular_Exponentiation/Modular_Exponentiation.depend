@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1623297350 source:c:\users\usuario\documents\ucsp\iii ciclo\algebra abstracta\semana 11\modular_exponentiation\main.cpp
+	<iostream>
+	<NTL/ZZ.h>
+	<bitset>
+	<string>
+
