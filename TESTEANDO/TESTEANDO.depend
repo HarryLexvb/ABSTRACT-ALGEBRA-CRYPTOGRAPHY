@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1624022071 source:c:\users\usuario\documents\ucsp\iii ciclo\algebra abstracta\semana 12\testeando\main.cpp
+	<bits/stdc++.h>
+	<windows.h>
+	<chrono>
+	<psapi.h>
+	<bitset>
+	<NTL/ZZ.h>
+
