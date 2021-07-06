@@ -1,0 +1,151 @@
+#include "rsa_bloques.h"
+
+random op;
+rsa_bloques::rsa_bloques(int bits){
+    // Facilita probar los codigos mas rapido
+    //p=conv<ZZ>("108776036190683125259463315757430245625525312593546616668643598590932771108650796945581974872535570332057355593826090881253878928018114750565789605068898232690842555075116446815818897787183885828920819037890482111477651155264381473788132512875594040823847775896835568222497449478860229556510185019295768539319");
+    //q=conv<ZZ>("111865624863031611994490063878968580065071539940086595658104065283585135372559071988047118201657245668913010399160074981863053503890491251214931099083738308245216199415497469023772910080463512725105033694564784810696391221560679781496366785039775869202698291877451783276076780104602636543374079304028450952933");
+    //e=conv<ZZ>("102218363580183243384579267083585257899720518442722532426853795928225678165982017328810556452659264551773048164374948847617516079105144944698161665571968445484599365282052626874100374175050978020718756342386026933740585325906160670741666221454325280467817822456036299247619786019917474276214257367099988838885");
+
+    /*p=gen_prime(op.generate_random(bits));
+    q=gen_prime(op.generate_random(bits));
+
+    n=p*q;
+
+    PhiN=(p-1)*(q-1);
+
+
+    do{
+        e=op.generate_random(bits);
+    }while(!Existe_Inversa(e,PhiN));
+
+    d=inversa(e,PhiN);*/
+
+    p=conv<ZZ>("103767481798130426943995805599796394847063847823750403647868852813510902073395587637756632063374877087499410609518952666037266661355260367558734312382007064218293165948804640577762154701319376528625284091993157404525619248415131538936565661587816874185087165074020260271251970314274017524130706107570158569711");
+    q=conv<ZZ>("139929917759681976362895984899789603471939859059225217369641719257072901229826441583161882480672513028228015646811229759646049992631111945532603760585138667730781783727210827035746041333166145404995197315842885558301228766310430485416829503136276781097647666421240826023957296196096850534489114872366109766213");
+    n=conv<ZZ>("14520175194141687052052455080169551628217046856681410207010328238445470998632358766936271580600412280358814531715266352681504759089058652295209103252141488657443870742805990977610525280587474812818087859059765189967055751876467900573998625529031657956343956143705349220148908335154424993973387267801172969672025911754608247457646584919736566698274766766404427547672153613825534584508783290580179852904992940516184358078191709382631146221941602725559524826462987167151370093964780279195457263106797918942457104331906686240558173513372025437134879244976238319515972507209571434384796340950740814615020825444232672974443");
+    e=conv<ZZ>("97363372599778328111187566118117123485958166734803945806560215965410447596406657422747119993278739180835811617344475023867117085039066988721524576471243749007185932080581196081686829444016103745089837896867228555676290171578386142767649559548866631357066645949924167715763474536721681069466103303011219605363");
+    PhiN=conv<ZZ>("14520175194141687052052455080169551628217046856681410207010328238445470998632358766936271580600412280358814531715266352681504759089058652295209103252141488657443870742805990977610525280587474812818087859059765189967055751876467900573998625529031657956343956143705349220148908335154424993973387267801172969671782214355050435054339693129236980699955763059521451926654643041754950781205561261359261338360945550400456931821861526956947829567955230412468186753495841435202295144288764811581949067072312397008836622924070643277731325498646463412781484080252144664233237675714310348089587074440369946556401004464296404638520");
+    d=conv<ZZ>("9537880497416615390594220437728206080698045071120990503328825969395006068855981506984824446602274991141144059950556594750387025166581561943134288238269148318866617103093513976520745262539242845807430897779754823585086115134947835854238161009506566818020551453740864888771871802736504299661786241134582169129581215903175567749305666157774035047018911251078250118566311579287239395718423576986089649783031291898199037560283450105896290575153903398432524918237103620140211944337933130103710855509837406423804863393615789121193245208955285963033941804657420799455497802884929685385100412228565898758171434189962563994227");
+
+    cout<<"VALORES \nn: "<<n<<endl;
+    cout<<"e: "<<e<<endl;
+    cout<<"p: "<<p<<"\nq: "<<q<<"\nPhiN: "<<PhiN<<"\nd: "<<d<<endl;
+}
+rsa_bloques::rsa_bloques(ZZ n,ZZ e){
+    this->n=n;
+    this->e=e;
+    cout<<"VALORES \nn "<<n<<"\ne "<<e<<endl;
+}
+string rsa_bloques::completarCeros(string mensaje,ZZ Nr ){
+    int digit =ZZtoStr(Nr).size()-1;
+    int c = modint(mensaje.size(),digit);
+    string cero(digit-c,'0');
+    return cero+mensaje;
+}
+string rsa_bloques::dividirBloques(string mensaje){
+    int digit=to_string(alfabeto.size()).size();
+    string str;
+    {
+        string cero(digit,'0');
+        for(int i=0;i<mensaje.size();i++){
+            size_t pos=alfabeto.find(mensaje.at(i));
+            int len=to_string(pos).size();
+            if(len<digit) str+=cero.substr(0,digit-len);
+            str+=to_string(pos);
+        }
+    }
+    digit=ZZtoStr(n).size()-1;
+    while(modint(str.size(),digit)) str+="22";
+    return str;
+}
+string rsa_bloques::encrypt(string mensaje, ZZ Nr, ZZ Er){
+    int digit=ZZtoStr(Nr).size()-1;
+    string out;
+    for(int i=0; i < mensaje.size(); i+=digit){
+        ZZ p(conv<ZZ>(mensaje.substr(i, digit).c_str()));
+        p=Power_mod(p,Er,Nr);
+        string ceros((digit+1-ZZtoStr(p).size()),'0');
+        out+=ceros+ZZtoStr(p);
+    }
+    return out;
+}
+string rsa_bloques::encryptD(string mensajeL){
+    string mensajeNo = dividirBloques(mensajeL);
+    int digit=ZZtoStr(n).size()-1;
+    string out;
+    for(int i=0;i<mensajeNo.size();i+=digit){
+        ZZ c(conv<ZZ>(mensajeNo.substr(i,digit).c_str()));
+        c=TRC(c);//se realiza una segunda version para optimizar con el TRC y mayor velocidad
+        string ceros((digit+1-ZZtoStr(c).size()),'0');
+        out=out+ceros+ZZtoStr(c);
+    }
+    return out;
+}
+string rsa_bloques::decrypt(string mensaje){
+    string salida;
+    int digitN=ZZtoStr(n).size();
+    int digit=digitN-1;
+    for(int i=0;i<mensaje.size();i+=digitN){
+        ZZ c(conv<ZZ>(mensaje.substr(i,digitN).c_str()));
+        c=TRC(c);
+        string ceros((digit-ZZtoStr(c).size()),'0');
+        salida+=ceros+ZZtoStr(c);
+    }
+    digit=to_string(alfabeto.size()).size();
+    string outLetters;
+    for(int i=0;i<salida.size();i+=digit){
+        outLetters+=alfabeto.at(stoi(salida.substr(i,digit)));
+    }
+    return outLetters;
+}
+string rsa_bloques::decryptE(string mensaje, ZZ Ne, ZZ Ee){
+    string salida;
+    int digitN=ZZtoStr(n).size();
+    int digit=digitN-1;
+    for(int i=0;i<mensaje.size();i+=digitN){
+        ZZ c(conv<ZZ>(mensaje.substr(i,digitN).c_str()));
+        c=TRC(c);
+        string ceros((digit-ZZtoStr(c).size()),'0');
+        salida+=ceros+ZZtoStr(c);
+    }
+    string mensajeNo = salida;
+    int a= modint(mensajeNo.size(), ZZtoStr(Ne).size());
+    mensajeNo = mensajeNo.substr(a);
+
+    string salida2;
+    digit=ZZtoStr(Ne).size()-1;
+    digitN=digit+1;
+    for(int i=0; i < mensajeNo.size(); i+=digitN){
+        ZZ c(conv<ZZ>(mensajeNo.substr(i, digitN).c_str()));
+        c=Power_mod(c,Ee,Ne);
+        string ceros((digit-ZZtoStr(c).size()),'0');
+        salida2+=ceros+ZZtoStr(c);
+    }
+    digit=to_string(alfabeto.size()).size();
+    string outLetters;
+    for(int i=0;i<salida2.size();i+=digit){
+        outLetters+=alfabeto.at(stoi(salida2.substr(i,digit)));
+    }
+    return outLetters;
+}
+string rsa_bloques::ZZtoStr(ZZ z){
+    stringstream ss;
+    ss<<z;
+    return ss.str();
+}
+ZZ rsa_bloques::TRC(ZZ M){
+    ZZ q1= inversa(modulo(q, p), p);
+    ZZ a1= Power_mod(modulo(M, p), modulo(d, p - 1), p);
+    ZZ q2= inversa(modulo(p, q), q);
+    ZZ a2= Power_mod(modulo(M, q), modulo(d, q - 1), q);
+    return modulo(modulo(a1 * q * q1, n) + modulo(a2 * p * q2, n), n);
+}
+string rsa_bloques::sign_encrypt(string mensajeL, ZZ Nr, ZZ Er){
+    string aux = encryptD(mensajeL);
+    return encrypt(completarCeros(aux, Nr), Nr, Er);
+}
+string rsa_bloques::remove_sign(string mensaje, ZZ Ne, ZZ Ee){
+    return decryptE(mensaje, Ne, Ee);
+}
+

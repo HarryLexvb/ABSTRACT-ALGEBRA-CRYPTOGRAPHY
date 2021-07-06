@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1625377693 source:c:\users\user\documents\ucsp\iii\rsa completo\main.cpp
+	<iostream>
+	"rsa_bloques.h"
+
+1625375956 c:\users\user\documents\ucsp\iii\rsa completo\include\rsa_bloques.h
+	<sstream>
+	<iostream>
+	<fstream>
+	<string>
+	<NTL/ZZ.h>
+	"cryptomath.h"
+	"random.h"
+
+1625375955 c:\users\user\documents\ucsp\iii\rsa completo\include\cryptomath.h
+	<iostream>
+	<NTL/ZZ.h>
+	<stdlib.h>
+	<time.h>
+
+1625375956 c:\users\user\documents\ucsp\iii\rsa completo\include\random.h
+	<bits/stdc++.h>
+	<windows.h>
+	<chrono>
+	<psapi.h>
+	<bitset>
+	"cryptomath.h"
+	<NTL/ZZ.h>
+
+1625375955 source:c:\users\user\documents\ucsp\iii\rsa completo\src\cryptomath.cpp
+	"cryptomath.h"
+
+1625375956 source:c:\users\user\documents\ucsp\iii\rsa completo\src\random.cpp
+	"random.h"
+
+1625379881 source:c:\users\user\documents\ucsp\iii\rsa completo\src\rsa_bloques.cpp
+	"rsa_bloques.h"
+
