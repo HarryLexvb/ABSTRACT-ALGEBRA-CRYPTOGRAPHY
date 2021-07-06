@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1625242767 source:c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\rsa__bloques_firma_digital\src\cryptomath.cpp
+	"cryptomath.h"
+
+1624939453 c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\rsa__bloques_firma_digital\include\cryptomath.h
+	<iostream>
+	<NTL/ZZ.h>
+	<stdlib.h>
+	<time.h>
+
+1625333452 source:c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\rsa__bloques_firma_digital\main.cpp
+	<iostream>
+	"rsa_bloques.h"
+
+1625242754 c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\rsa__bloques_firma_digital\include\rsa_bloques.h
+	<sstream>
+	<iostream>
+	<fstream>
+	<string>
+	<NTL/ZZ.h>
+	"cryptomath.h"
+	"random.h"
+
+1624939718 c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\rsa__bloques_firma_digital\include\random.h
+	<bits/stdc++.h>
+	<windows.h>
+	<chrono>
+	<psapi.h>
+	<bitset>
+	"cryptomath.h"
+	<NTL/ZZ.h>
+
+1624939453 source:c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\rsa__bloques_firma_digital\src\random.cpp
+	"random.h"
+
+1625348160 source:c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\rsa__bloques_firma_digital\src\rsa_bloques.cpp
+	"rsa_bloques.h"
+
