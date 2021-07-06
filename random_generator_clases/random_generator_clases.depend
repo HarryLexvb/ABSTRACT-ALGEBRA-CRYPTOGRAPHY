@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1624760355 source:c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\random_generator_clases\src\cryptomath.cpp
+	"cryptomath.h"
+
+1624760355 c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\random_generator_clases\include\cryptomath.h
+	<iostream>
+	<NTL/ZZ.h>
+	<stdlib.h>
+	<time.h>
+
+1624761152 source:c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\random_generator_clases\src\random.cpp
+	"random.h"
+
+1624760981 c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\random_generator_clases\include\random.h
+	<bits/stdc++.h>
+	<windows.h>
+	<chrono>
+	<psapi.h>
+	<bitset>
+	"cryptomath.h"
+	<NTL/ZZ.h>
+
+1624761213 source:c:\users\win 10\documents\ucsp\iii ciclo\algebra abstracta\random_generator_clases\main.cpp
+	<iostream>
+	"cryptomath.h"
+	"random.h"
+	<NTL/ZZ.h>
+
